@@ -5,29 +5,7 @@ html(lang="en-us")
   body#top
     //- Begin Page-Specific Content
     
-    header.header-main
-
-      .header-main--mow-nav-trigger.js-mow-nav-trigger
-        .ico-menu
-
-      h1.header-main--logo
-        a(href="/")
-          span.header-main--logo--content
-          span.u-hidden Aaron Sarnat
-          img.u-hidden(src="/img/logo-as3.svg")
-          
-      nav.header-main--nav
-        ul
-          li.header-main--nav--li---selected
-            a(href="#") Portfolio
-          li
-            a(href="#") Code
-          li
-            a(href="#") Blog
-          li
-            a(href="#") About
-          li
-            a(href="#") Contact
+    include /inc/header.jade
           
     section.banner.banner---portfolio
 
@@ -343,7 +321,7 @@ html(lang="en-us")
             .thumbs--thumb--meta iPhone App | 2009
 
 
-    footer.footer-main
+    include /inc/footer.jade
 
     //- END Page-Specific Content
     include /inc/end.jade
