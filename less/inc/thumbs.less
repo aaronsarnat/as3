@@ -1,0 +1,247 @@
+.thumbs {
+  .u-relative;
+}
+
+.thumbs--group {
+  .u-relative;
+  .u-hmargin-j;
+  .u-tpadding-h;
+  .u-bpadding-e;
+  cursor: default;
+  padding-left: 17%;
+
+  h3 {
+    .t-thin;
+    font-size: 2em;
+    .u-gray-med;
+    .u-mp0;
+    .u-bpadding-d;
+    
+    span {
+      font-size: 55%;
+      color: #ccc;
+      .u-hpadding-c;
+      border-left: 1px solid #eee;
+      .t-uppercase;
+      
+      &:first-child {
+        border: none;
+        .u-lpadding-e;
+      }
+    }
+  }
+  
+  .thumbs--go-to-top {
+    .u-absolute;
+    right: 0;
+    top: @size-l;
+    .u-gray-light;
+  }
+}
+
+.thumbs--thumb {
+  .u-bpadding-c;
+  .u-bmargin-e;
+  .u-tpadding-b;
+  position: relative;
+  .fn-transform(scale(0.97,0.97));
+  .u-backface-hidden;
+  height: 100%;
+  //.fn-transition-property(background-color, .2s);
+  .fn-transition(opacity .2s, background-color .2s, -webkit-transform .1s, -moz-transform .1s, -o-transform .1s, -ms-transform .1s, transform .1s);
+
+  .thumbs--thumb--img {
+    .u-w100;
+    height: 12vw;
+    .u-bmargin-c;
+    .u-backface-hidden;
+    overflow: hidden;
+    background-color: #ddd;
+    .fn-transition-property(opacity, .2s);
+  }
+  
+  .thumbs--thumb--img--growbox {
+    .fn-transform(scale(1,1));
+    .fn-transition-transform (.3s, ease-in-out);
+    .u-backface-hidden;
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+    position: relative;
+    top: -0.5%;
+    left: -0.5%;
+  }
+  
+  .thumbs--thumb--img--content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    .fn-filter(blur(.08em) grayscale(.66));
+    opacity: .3;
+    .u-backface-hidden;
+    //.u-backface-hidden;
+    //.fn-transform(scale(1.02,1.02));
+    .fn-transition-property(all, .2s);
+  }
+
+  h4 {
+    .u-mp0;
+    .u-lpadding-d;
+    .u-slate;
+    .t-weight-500;
+    .fn-transition-property(all, .2s);
+  }
+  
+  .thumbs--thumb--meta {
+    .u-gray-light;
+    font-size: .95em;
+    .u-vpadding-a;
+    .u-lpadding-d;
+    .t-crisp;
+    .fn-transition-property(all, .2s);
+  }
+  
+  &:after {
+    .u-100;
+    .u-pseudo;
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 .5em 5em rgba(0,0,20,.25), .15em .2em .5em rgba(20,20,0,.3);
+    .fn-transition-property(opacity, .2s);
+    opacity: 0;
+  .u-backface-hidden;
+  }
+  
+  &:hover {
+    background: @blue;
+    .fn-transform(scale(1.04,1.04));
+    z-index: 2;
+    
+    .thumbs--thumb--img--growbox {
+      //.fn-transform(scale(1,1));
+      .fn-transform(scale(1.25,1.25));
+      .fn-transition-transform (10s, ease-in-out);
+    }
+
+    .thumbs--thumb--img--content {
+      opacity: 1;
+      .fn-filter(blur(0) grayscale(0));
+      //.fn-transform(scale(1,1));
+      .u-backface-visible;
+    }
+    
+    h4,
+    .thumbs--thumb--meta {
+      color: @white;
+    }
+    
+    &:after {
+      opacity: 1;
+    }
+  }
+  
+  &:active {
+    opacity: .25;
+    .u-bg-gray-light;
+    .fn-transition(opacity .05s, background-color .05s);
+    .fn-transform(scale(0.97,0.97));
+  }
+}
+
+.thumbs--nav {
+  .u-absolute;
+  top: 0;
+  left: 0;
+  .u-padding-j;
+  .u-nav-block;
+  .u-backface-hidden;
+  z-index: 9;
+  
+  ul {
+    margin-left: -.5em;
+    margin-top: -.5em;
+      
+    li {
+      
+      a {
+        padding: .5em;
+      }
+    }
+  }
+}
+
+// Desktop
+@media screen and (min-width: @screen-width-lg) {
+
+}
+
+// Tablet Landscape
+@media screen and (max-width: @screen-width-lg) {
+
+  // 3-up
+  
+  .thumbs--nav {
+    .u-padding-g;
+  }
+  
+  .thumbs--group {
+    .u-hmargin-g;
+    .u-tpadding-f;
+    padding-left: 20%;
+
+    .thumbs--go-to-top {
+      top: @size-h;
+    }
+  }
+  
+  .thumbs--thumb {
+    .thumbs--thumb--img {
+      height: 15.15vw;
+    }
+  }
+}
+
+// Tablet Portrait
+@media screen and (max-width: @screen-width-md) {
+
+  // 2-up
+
+  .thumbs--nav,
+  .thumbs--go-to-top {
+    display: none;
+  }
+  
+  .thumbs--group {
+    .u-lpadding-0;
+  }
+  
+  .thumbs--thumb {
+    .thumbs--thumb--img {
+      height: 28.16vw;
+    }
+  }
+}
+
+// Mobile
+@media screen and (max-width: @screen-width-sm) {
+
+  // 1-up
+
+  .thumbs--group {
+    .u-hmargin-e;
+    .u-tpadding-e;
+  }
+  
+  .thumbs--thumb {
+    display: block;
+    .thumbs--thumb--img {
+      height: 56.4vw;
+    }
+  }
+}

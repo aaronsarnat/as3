@@ -1,0 +1,42 @@
+.banner {
+  .u-w100;
+}
+
+.banner---portfolio {
+  height: 30vw;
+  .u-bg-black;
+  position: relative;
+  overflow: hidden;
+  margin-top: 6em;
+}
+
+// Desktop
+@media screen and (min-width: @screen-width-lg) {
+
+}
+
+// Tablet Landscape
+@media screen and (max-width: @screen-width-lg) {
+  .banner---portfolio {
+    margin-top: 5em;
+    // Need to set corresponding height on header (see header.less)
+  }
+}
+
+// Tablet Portrait
+@media screen and (max-width: @screen-width-md2) {
+  .banner---portfolio {
+    margin-top: 4em;
+    height: 40vw;
+    // Need to set corresponding height on header (see header.less)
+  }
+}
+
+// Mobile
+@media screen and (max-width: @screen-width-sm) {
+  .banner---portfolio {
+    margin-top: 3.25em;
+    height: 50vw;
+    // Need to set corresponding height on header (see header.less)
+  }
+}

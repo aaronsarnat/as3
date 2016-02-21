@@ -1,0 +1,183 @@
+.flex {
+  .fn-flex;
+}
+
+// Flex Combo Containers
+
+.flex-container-column {
+  .fn-flex;
+  .fn-flex-direction(column);
+}
+
+.flex-container-row {
+  .fn-flex;
+  .fn-flex-direction(row);
+}
+
+.flex-container-centered {
+  .fn-flex;
+  .fn-flex-direction(row);
+  .flex-align-v-center;
+  .flex-align-h-center;
+}
+
+// Flex Direction
+
+.flex-direction-column {
+  .fn-flex-direction(column);
+}
+
+.flex-direction-row {
+  .fn-flex-direction(row);
+}
+
+.flex-direction-row-reverse {
+  .fn-flex-direction(row-reverse);
+}
+
+.flex-direction-column-reverse {
+  .fn-flex-direction(column-reverse);
+}
+
+.flex-direction-initial {
+  .fn-flex-direction(initial);
+}
+
+// Flex Vertical Algin
+
+.flex-align-v-bottom {
+  .fn-flex-align-items(flex-end);
+}
+
+.flex-align-v-top {
+  .fn-flex-align-items(flex-start);
+}
+
+.flex-align-v-center {
+  .fn-flex-align-items(center);
+}
+
+.flex-align-v-stretch {
+  .fn-flex-align-items(stretch);
+}
+
+.flex-align-content-stretch {
+  .fn-align-content(stretch);
+}
+
+.flex-align-content-center {
+  .fn-align-content(center);
+}
+
+.flex-align-content-flex-start {
+  .fn-align-content(flex-start);
+}
+
+.flex-align-content-flex-end {
+  .fn-align-content(flex-end);
+}
+
+.flex-align-content-space-between {
+  .fn-align-content(space-between);
+}
+
+.flex-align-content-space-around {
+  .fn-align-content(space-around);
+}
+
+.flex-align-content-initial {
+  .fn-align-content(initial);
+}
+
+// Flex Horizontal Align
+
+.flex-align-h-left {
+  .fn-flex-justify(flex-start);
+}
+
+.flex-align-h-right {
+  .fn-flex-justify(flex-end);
+}
+
+.flex-align-h-center {
+  .fn-flex-justify(center);
+}
+
+// Flex Wrap
+
+.flex-wrap {
+  .fn-flex-wrap(wrap);
+}
+
+.flex-nowrap {
+  .fn-flex-wrap(nowrap);
+}
+
+.flex-wrap-reverse {
+  .fn-flex-wrap(wrap-reverse);
+}
+
+.flex-wrap-initial {
+  .fn-flex-wrap(initial);
+}
+
+// Flex Align Self
+
+.flex-align-self-auto {
+  .fn-flex-align-self(auto);
+}
+
+.flex-align-self-flex-start {
+  .fn-flex-align-self(flex-start);
+}
+
+.flex-align-self-flex-end {
+  .fn-flex-align-self(flex-end);
+}
+
+.flex-align-self-center {
+  .fn-flex-align-self(center);
+}
+
+.flex-align-self-baseline {
+  .fn-flex-align-self(baseline);
+}
+
+.flex-align-self-stretch {
+  .fn-flex-align-self(stretch);
+}
+
+// Flex Pin
+
+.flex-pin-left {
+  .flex-align-self-flex-start;
+}
+
+.flex-pin-right {
+  margin-left: auto;
+}
+
+
+/*
+Flex Basis (on child of flex container)
+  .fn-flex-basis();
+  #main div:nth-of-type(2) {flex-basis: 80px;}
+  
+Flex Grow (on child of flex container)
+  .fn-flex-grow();
+  #main div:nth-of-type(1) {flex-grow: 1;}
+  #main div:nth-of-type(2) {flex-grow: 3;}
+  
+Flex Shrink (on child of flex container)
+  .fn-flex-shrink();
+  #main div {flex-shrink: 1;}
+  #main div:nth-of-type(2) {flex-shrink: 3;}
+  
+Flex Order (on child of flex container)
+  .fn-flex-order();
+  order: 1;
+  
+Flex Flow (shorthand property for the flex-direction and the flex-wrap)
+  .fn-flex-flow();
+  flex-flow: row-reverse wrap;
+*/
