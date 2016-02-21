@@ -1,6 +1,6 @@
 .header-main {
   position: fixed;
-  background: rgba(255,255,255,.99);
+  background: fadeout(@gray-very-dark, .99);
   top: 0;
   left: 0;
   .u-w100;
@@ -16,14 +16,14 @@
   display: block;
   .u-mp0;
   .u-h100;
-  
+
   a {
     display: block;
     width: 15em;
     .u-h100;
     .u-lpadding-h;
     .u-rpadding-h;
-    
+
     .header-main--logo--content {
       display: block;
       background: url("/img/logo-as3.svg") center center no-repeat;
@@ -43,12 +43,12 @@
     .flex-container-row;
     .flex-align-v-center;
     .u-h100;
-    
+
     li {
       .flex;
       .flex-align-v-center;
       .u-h100;
-      
+
       a {
       .flex;
       .flex-align-v-center;
@@ -57,12 +57,12 @@
         .u-vpadding-0;
         font-size: 1em;
       }
-      
+
       &.header-main--nav--li---selected {
 
         a {
           background-color: rgba(0,0,0,.075);
-          
+
           &,
           &:hover,
           &:active {
@@ -83,15 +83,15 @@
   .fn-transition-property(background-color, .2s);
   cursor: pointer;
   color: @slate;
-  
+
   .ico-menu {
     .fn-transition-property(color, .2s);
     font-size: 1.1em;
   }
-  
+
   &:hover {
     background-color: @gray-med;
-    
+
     .ico-menu {
       color: @white;
     }
@@ -117,15 +117,15 @@
     height: 4em;
     // Need to set corresponding top margin on banner (see banner.less)
   }
-  
+
   .header-main--nav {
     display: none;
   }
-  
+
   .header-main--mow-nav-trigger {
     .flex-container-centered;
   }
-  
+
   .header-main--logo {
     .u-hcentered;
   }
@@ -137,11 +137,11 @@
     height: 3.25em;
     // Need to set corresponding top margin on banner (see banner.less)
   }
-  
+
   .header-main--mow-nav-trigger {
     width: 3.25em;
   }
-  
+
   .header-main--logo {
     font-size: .85em;
   }
@@ -149,7 +149,7 @@
 
 // Mobile
 @media screen and (max-width: @screen-width-xs) {
-  
+
 /*
   .header-main--logo {
     font-size: .85em;
