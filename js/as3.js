@@ -54,16 +54,18 @@ $(function() {
   updateMenu();
 
   function updateMenu() {
-    i = Math.round(p.offset().top);
-    w = Math.round($(window).scrollTop());
+    if (p.length) {
+      i = Math.round(p.offset().top);
+      w = Math.round($(window).scrollTop());
 
-    if( w > (i - h) ) {
-      if (!e.hasClass("u-fixed")) {
-        e.addClass("u-fixed").css('top', h + "px");
-      }
-    } else {
-      if (e.hasClass("u-fixed")) {
-        e.removeClass("u-fixed").css('top', 0 + "px");
+      if( w > (i - h) ) {
+        if (!e.hasClass("u-fixed")) {
+          e.addClass("u-fixed").css('top', h + "px");
+        }
+      } else {
+        if (e.hasClass("u-fixed")) {
+          e.removeClass("u-fixed").css('top', 0 + "px");
+        }
       }
     }
   }
