@@ -29,7 +29,7 @@ $(function() {
 
 });
 
-var imgLocation = "/img/content/";
+var imgLocation = "/assets/content/";
 
 // Populate Content Images
 $(function() {

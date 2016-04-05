@@ -4,11 +4,30 @@ html.home(lang="en-us")
     title Aaron Sarnat | Portfolio
   body#top
     //- Begin Page-Specific Content
-    .flex-container-centered.u-h100
+    
+    .home-bg-vid.flex-container-centered.u-100
+      video(autoplay="" loop="" poster="" muted="" id="bgvid")
+        source(src="/assets/background.mp4" type="video/mp4")
+      .home-bg-vid--tint
+      
+    .flex-container-centered.u-100(style="position:absolute;top:0;left:0;")
       h1.home-title.tk-trajan-pro-3.tk-fadein.t-uppercase
         span.home-title--fn Aaron
-        span.home-title--space  
+        span.home-title--space &nbsp;
         span.home-title--ln Sarnat
+        
+    div
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut congue enim. Donec congue bibendum hendrerit. In iaculis nunc in ex malesuada gravida non pharetra risus. Ut congue congue ante sit amet mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in aliquam odio. Nullam sapien sapien, semper eu vulputate sed, accumsan id quam.
+      
+      p Maecenas ultrices scelerisque sem et porttitor. Aenean vitae est gravida, euismod sapien porta, rhoncus neque. Morbi maximus euismod ligula et consectetur. Aliquam dapibus sit amet dolor id dictum. Mauris hendrerit volutpat enim, sit amet sagittis nunc ornare eget. Nulla consectetur nisl augue, sed dapibus felis sollicitudin eu. Sed iaculis nunc erat, vitae eleifend augue vestibulum sed.
+      
+      p Fusce fringilla sapien eget bibendum lobortis. Sed bibendum lectus sit amet semper tincidunt. Proin nec fringilla tellus. Curabitur ultrices ipsum sit amet tellus fringilla aliquam. Vivamus lacinia euismod ullamcorper. Ut ultrices augue sed tortor venenatis eleifend. Fusce quis molestie ante, vel cursus mi.
+      
+      p Cras sed erat vitae arcu viverra sagittis ut non lorem. Nullam at nisl tincidunt, gravida lectus id, fermentum tortor. Nam maximus placerat leo, in varius ligula auctor in. Fusce magna mauris, congue vel lacus eu, iaculis hendrerit urna. Vivamus id diam pharetra, elementum magna ac, volutpat quam. Integer accumsan est eu sodales efficitur. Duis sit amet arcu eu mi interdum viverra non a elit. Morbi vel odio ullamcorper, dapibus lacus a, aliquam ante. In hac habitasse platea dictumst. Nunc lacinia quam erat, sit amet sollicitudin augue sagittis id. Mauris sit amet molestie arcu.
+      
+      p Donec ut nisl magna. Sed eu mi semper, rutrum felis eget, vulputate lacus. Donec egestas massa vitae semper hendrerit. Nam hendrerit quam et tincidunt bibendum. Nunc hendrerit libero velit, in auctor tellus pharetra non. Duis aliquet tortor dui, ac sagittis tortor auctor ac. Mauris porta vel risus a facilisis. Phasellus finibus, ante sit amet euismod blandit, sem tortor pulvinar erat, sit amet aliquam enim elit id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse eget tempor magna. Mauris elit enim, malesuada quis ultricies eu, rhoncus vitae eros. Nunc sit amet mi eros.
+      
+      
       
     //- END Page-Specific Content
     include /_inc/scripts.jade
